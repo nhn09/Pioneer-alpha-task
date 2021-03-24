@@ -2,7 +2,7 @@ import React, {useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios'
 import Card from './components/News/Cards';
-import Navbar from './components/navbar/index'
+import Header from './components/UI/header'
 
 const App=() => {
   const[items,setItems] = useState ([])
@@ -26,7 +26,7 @@ const App=() => {
 
   return (
     <div >
-     < Navbar/>
+     <Header/>
      <Card  isLoading={isLoading} items={items}/>
     </div>
   );
