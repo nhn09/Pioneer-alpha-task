@@ -1,6 +1,7 @@
 import React, {useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios'
+import Card from './components/News/Cards';
 import Header from './components/UI/header';
 
 const App=() => {
@@ -15,6 +16,8 @@ const App=() => {
      const result = await axios (`https://www.breakingbadapi.com/api/characters`)
 
      console.log(result.data)
+     setItems(result.data)
+     setIsLoading(false)
    }
 
    fetchItems()
@@ -24,7 +27,8 @@ const App=() => {
   return (
     <div className="Container">
      <Header/>
-     Starting
+     <Card  isLoading={isLoading} items={items}/>
+     
     </div>
   );
 }
