@@ -3,11 +3,8 @@ import '../../../src/App.css'
 
 const Header = () => {
     return (
-        <header className='center-header'>
-            <div>
-                I am navbar
-            </div>
-            
+        <header className='center-header' id='news'>         
+              <div >NEWS</div>
         </header>
     )
 }

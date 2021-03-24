@@ -8,7 +8,7 @@ const Cards = ({items,isLoading }) => {
      <section className='cards'>
         {items.map ( items => (
             //<NewsItems key={item.char_id}> item ={ item }</NewsItems>
-            <NewsItems key={items.char_id} item={items} > </NewsItems>
+            <NewsItems key={items.id} item={items} > </NewsItems>
         ))}
 
      </section>
