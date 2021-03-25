@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import { SliderData } from './SliderImageData'
 import { RiArrowRightSLine, RiArrowLeftSLine } from 'react-icons/ri'
+import {OverCover} from './overlay'
 
 const Slider =({slides})=> {
     const [current,setCurrent]= useState(0)
@@ -21,13 +22,13 @@ const Slider =({slides})=> {
     return(
         
         <section className='slider'>
-         <div className='overlay'></div>   
+         <OverCover/>
          < RiArrowRightSLine className='left-arrow' onClick={prevSlide} />
          < RiArrowLeftSLine className='right-arrow' onClick={nextSlide} />
 
             {SliderData.map((slide,index)=>{
                 return (
-
+                    
                     <div className={index === current ? 'slide active' : 'slide'} key={index}>
                       {index === current && (<img src={slide.image} alt='space' className='image' />)}
                     </div>

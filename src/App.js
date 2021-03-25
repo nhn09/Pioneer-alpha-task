@@ -5,6 +5,11 @@ import Card from './components/News/Cards';
 import Header from './components/UI/header'
 import Slider from './components/UI/Slider';
 import { SliderData } from './components/UI/SliderImageData';
+import ThreeRectangles from './components/UI/ThreeBox/ThreeRectangles';
+import styled from 'styled-components'
+import WholeBox from './components/UI/DarkBox/WholeBox';
+
+
 
 const App=() => {
   const[items,setItems] = useState ([])
@@ -30,6 +35,8 @@ const App=() => {
     <div >
      <Header/>
      <Slider slides={ SliderData }/>
+     <ThreeRectangles/>
+     <WholeBox/>
      <Card  isLoading={isLoading} items={items}/>
      
     </div>

@@ -133,8 +133,7 @@ display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 2rem;
 background: #30363D;
-
-margin: 0em 5em 0em 5em ;
+margin: 5em 5em 5em 5em ;
 
 
 }
@@ -177,7 +176,12 @@ margin: 0em 5em 0em 5em ;
   width: 70%;
   height: 10%;
   border: none;
+  color: rgba(255, 255, 255, 1);
 }
+
+
+
+
 .card img {
   width: 100%;
   height: 20%;
@@ -195,6 +199,7 @@ margin: 0em 5em 0em 5em ;
   font-family: 'Montserrat', sans-serif;
   height: 25%;
   overflow: hidden;
+  margin-top: 10px;
 
 }
 
@@ -223,7 +228,11 @@ margin: 0em 5em 0em 5em ;
 .image {
   width: 100%;
   object-fit: cover;
-  height: 600px;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .7;
   
 }
 
@@ -270,18 +279,47 @@ margin: 0em 5em 0em 5em ;
 
 .overlay
 {
-  background-color:linear-gradient(90deg,#3C444C 60%,transparent) ;
-  opacity: .5;
+  background:linear-gradient(90deg, #3C444C 0%, rgba(60, 68, 76, 0) 100%);
+  filter: drop-shadow(0px 30px 40px rgba(0, 0, 0, 0.1));
   text-align: center;
   z-index: 5;
+  width: 100%;
+  position: absolute;
+  top:0px;
+  bottom: 0px;
+  display: flex;
 
 }
 
 
 
+
+
+.content-overlay
+{
+width: auto;
+margin: 20%;
+align-items: center;
+
+}
+
+.overlay .flex-button
+{
+  margin:auto;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
 @media (max-width: 800px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .overlay .flex-button
+  {
+    flex-direction: column;
+    justify-content: center;
+    display: block;
   }
 }
 
