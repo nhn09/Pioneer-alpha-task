@@ -3,6 +3,8 @@ import './App.css';
 import axios from 'axios'
 import Card from './components/News/Cards';
 import Header from './components/UI/header'
+import Slider from './components/UI/Slider';
+import { SliderData } from './components/UI/SliderImageData';
 
 const App=() => {
   const[items,setItems] = useState ([])
@@ -27,7 +29,9 @@ const App=() => {
   return (
     <div >
      <Header/>
+     <Slider slides={ SliderData }/>
      <Card  isLoading={isLoading} items={items}/>
+     
     </div>
   );
 }

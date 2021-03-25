@@ -94,15 +94,33 @@ color: #FFFFFF;
   font-family:Montserrat,sans-serif;
   font-weight: 400;
   font-size: 10px;
-
+  cursor: pointer;
 
 
 }
 
-.nav-elements:hover
-{
-  font-weight: 500;
-  
+.nav-elements div{
+  position: relative;
+}
+.nav-elements div::after{
+ 
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  content:'';
+  background: linear-gradient(90deg, #F27A54 0%, #A154F2 186.42%);
+  transform:scaleX(0);
+  transform-origin: center;
+  transition: transform 350ms ease-in;
+
+}
+
+
+
+.nav-elements div:hover::after{
+  transform: scaleX(1);
 
 }
 
@@ -188,6 +206,74 @@ margin: 0em 5em 0em 5em ;
   overflow: hidden;
   border-radius: 5px;
   text-align: center;
+
+}
+
+
+.slider {
+  
+  height: 100vh;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  object-fit: cover;
+  height: 600px;
+  
+}
+
+.right-arrow {
+  position: absolute;
+   color: white;
+  top: 50%;
+  right: 0px;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+  width: 50px;
+  height: 100px;
+  background: #30363D;
+  opacity: 0.5;
+  transform: matrix(-1, 0, 0, 1, 0, 0); 
+}
+
+.left-arrow {
+  position: absolute;
+  left: 0px;
+  cursor: pointer;
+  user-select: none;
+  color: white;
+  top: 50%;
+  z-index: 10;
+  width: 50px;
+  height: 100px;
+  background: #30363D;
+  opacity: 0.5;
+  transform: matrix(-1, 0, 0, 1, 0, 0); 
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+
+}
+
+.overlay
+{
+  background-color:linear-gradient(90deg,#3C444C 60%,transparent) ;
+  opacity: .5;
+  text-align: center;
+  z-index: 5;
 
 }
 
