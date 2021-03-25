@@ -6,8 +6,8 @@ import { PinkRectangleOne, PinkRectangleTwo, WhiteRectangle } from './EachBox';
 const AllBox=styled.div
 `
 width: 100%;
-height: 200px;
-padding:1em;
+height: 70vh;
+padding:4em;
 display:grid;
 grid-gap:10%;
 background-color: #30363D;

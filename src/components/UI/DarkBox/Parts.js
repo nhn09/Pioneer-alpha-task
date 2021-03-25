@@ -66,7 +66,7 @@ export const PartTwo = () => {
 export const PartThree = () => {
     return (
         <PartsStyle>
-            <StoreMallDirectorySharpIcon/>
+            <AccountCircleIcon/>
             <Partsh>Magna Aliqua</Partsh>
             <PartP>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</PartP>
         </PartsStyle>
