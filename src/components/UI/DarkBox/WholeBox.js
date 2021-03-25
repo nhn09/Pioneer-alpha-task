@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Parts from './Parts';
+import {PartOne,PartTwo,PartThree} from './Parts';
 
 const Space= styled.div`
   width: 10px;
@@ -60,11 +60,11 @@ const WholeBox = () => {
            <WholeBoxPara>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </WholeBoxPara>
            <Space/>
            <FlexParts>
-               <Parts></Parts>
+               <PartOne></PartOne>
                <Space/>
-               <Parts> </Parts>
+               <PartTwo> </PartTwo>
                <Space/>
-               <Parts></Parts>
+               <PartThree></PartThree>
             </FlexParts>
            
            

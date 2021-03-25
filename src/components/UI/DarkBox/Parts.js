@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import PhonelinkIcon from '@material-ui/icons/Phonelink';
+import StoreMallDirectorySharpIcon from '@material-ui/icons/StoreMallDirectorySharp';
 
 const PartsStyle=styled.div
 `
@@ -36,7 +38,7 @@ color: #CBCFD4;
 `;
 
 
-const Parts = () => {
+export const PartOne = () => {
     return (
         <PartsStyle>
             <AccountCircleIcon/>
@@ -48,4 +50,30 @@ const Parts = () => {
     )
 }
 
-export default Parts
+export const PartTwo = () => {
+    return (
+        <PartsStyle>
+            <PhonelinkIcon/>
+            <Partsh>Magna Aliqua</Partsh>
+            <PartP>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</PartP>
+        </PartsStyle>
+            
+        
+    )
+}
+
+
+export const PartThree = () => {
+    return (
+        <PartsStyle>
+            <StoreMallDirectorySharpIcon/>
+            <Partsh>Magna Aliqua</Partsh>
+            <PartP>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</PartP>
+        </PartsStyle>
+            
+        
+    )
+}
+
+
+

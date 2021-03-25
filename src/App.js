@@ -6,8 +6,9 @@ import Header from './components/UI/header'
 import Slider from './components/UI/Slider';
 import { SliderData } from './components/UI/SliderImageData';
 import ThreeRectangles from './components/UI/ThreeBox/ThreeRectangles';
-import styled from 'styled-components'
 import WholeBox from './components/UI/DarkBox/WholeBox';
+import PinkBox from './components/UI/ThreeBox/PinkBox/PinkBox';
+import FooterMain from './components/UI/Footer/FooterMain';
 
 
 
@@ -38,6 +39,8 @@ const App=() => {
      <ThreeRectangles/>
      <WholeBox/>
      <Card  isLoading={isLoading} items={items}/>
+     <PinkBox/>
+     <FooterMain/>
      
     </div>
   );
