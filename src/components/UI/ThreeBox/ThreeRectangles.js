@@ -12,7 +12,18 @@ display:grid;
 grid-gap:10%;
 background-color: #30363D;
 grid-template-columns: repeat(3, 1fr);
-justify-content:center;`;
+justify-content:center;
+
+@media all and (max-width:500px) {
+
+    display:flex;
+    flex-direction:column;
+    height:160vh;
+    
+      
+  }
+
+`;
 
 
 const ThreeRectangles = () => {

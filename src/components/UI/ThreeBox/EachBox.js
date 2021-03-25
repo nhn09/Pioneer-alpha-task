@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import ForumIcon from '@material-ui/icons/Forum';
 import {TiWeatherPartlySunny} from 'react-icons/ti';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
+import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 
 const PinkBox=styled.div
 `
@@ -20,14 +21,15 @@ align-items: center;
 text-align: center;
 color: #FFFFFF;
 text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+position:relative;
 
 `;
 
 const WhiteBox= styled.div
 `
 background: linear-gradient(180deg, rgba(60, 68, 77, 0) 0%, #3C444D 100%);
-width: 100%;
-height: 100%;
+width: 90%;
+height: 50vh;
 font-family: Montserrat;
 font-style: normal;
 font-weight: 300;
@@ -40,6 +42,9 @@ align-items: center;
 text-align: center;
 color: #FFFFFF;
 text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+position:relative;
+
+
 
 `;
 
@@ -65,6 +70,17 @@ const Pinkbutton= styled.button`
   border: none;
   margin-top:4%;
   color: rgba(255, 255, 255, 1);
+
+  @media all and (max-width:500px) {
+
+    
+    width:auto;
+    margin:auto;
+    
+      
+  }
+
+  
 
   `
   ;
@@ -107,11 +123,15 @@ font-style: normal;
 
 const Dotdot= styled.div
 `
+position:absolute;
+top:5px;
+right:7px;
 `;
 
 export const PinkRectangleOne = () => {
     return (
         <PinkBox> 
+          <Dotdot><MoreHorizIcon/></Dotdot>
           <IconShaping><ForumIcon/> </IconShaping>
           <Number>2564</Number> 
           <BoxTopic>Messages</BoxTopic>
@@ -124,6 +144,7 @@ export const PinkRectangleOne = () => {
 export const WhiteRectangle = () => {
     return (
       <WhiteBox>
+         <Dotdot><MoreHorizIcon/></Dotdot>
           <LocationOnIcon/>
           <Addrs>138 Mount Pleasant Bracknell, RG12 9EA Berkshire, UK </Addrs>
           <Pinkbutton>Get Direction</Pinkbutton>
@@ -135,7 +156,7 @@ export const WhiteRectangle = () => {
 export const PinkRectangleTwo = () => {
     return (
         <PinkBox> 
-          
+          <Dotdot><MoreHorizIcon/></Dotdot>
           <IconShaping> <TiWeatherPartlySunny/>  </IconShaping>
           <Number>18ºC</Number> 
           <BoxTopic>Craiova, RO</BoxTopic>

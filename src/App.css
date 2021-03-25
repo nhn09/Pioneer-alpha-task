@@ -32,6 +32,8 @@ body{
  width: 80%;
 }
 
+
+
 .fa-facebook-square
 {
   background: linear-gradient(90deg, #F27A54 0%, #A154F2 186.42%);
@@ -47,12 +49,15 @@ body{
 	-webkit-text-fill-color: transparent;
 }
 
+
 .fa-dribbble
 {
   background: linear-gradient(90deg, #F27A54 0%, #A154F2 186.42%);
   -webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+
+
 
 .center-header
 {
@@ -149,13 +154,14 @@ padding: 5% 5% 5% 5% ;
   border-radius: 6px;
   margin: 5% 5% 5% 5%;
   box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.1);
+  
 
 
 }
 
 .card .card-container
 {
-  height: 80%;;
+  height: 80%;
 }
 
 .card h1 {
@@ -168,6 +174,8 @@ padding: 5% 5% 5% 5% ;
   color: #FFFFFF;
   height: 20%;
   overflow: unset;
+
+
 }
 
 .card button
@@ -312,7 +320,7 @@ align-items: center;
   justify-content: center;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -322,6 +330,20 @@ align-items: center;
     justify-content: center;
     display: block;
   }
+
+  .space-links
+{
+ width: 60%;
+}
+
+.card h1
+{
+ overflow:hidden;
+}
+
+
+
+
 }
 
 @media (max-width: 500px) {
@@ -333,5 +355,18 @@ align-items: center;
     height: 300px;
     object-fit: contain;
   }
+
+  .space-links
+{
+ width: 50%;
+}
+
+.content-overlay
+{
+width: auto;
+margin: 10%;
+align-items: center;
+
+}
     
 }
